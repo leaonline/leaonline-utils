@@ -1,7 +1,7 @@
 /* eslint-env meteor */
 Package.describe({
   name: 'leaonline:utils',
-  version: '1.0.0',
+  version: '2.0.0',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.
@@ -12,13 +12,13 @@ Package.describe({
 })
 
 Package.onUse(function (api) {
-  api.versionsFrom('1.8.1')
+  api.versionsFrom(['3.0.1'])
   api.use('ecmascript')
   api.mainModule('utils.js')
 })
 
 Package.onTest(function (api) {
-  api.use('ecmascript')
+  api.versionsFrom(['3.0.1'])
   api.use('tinytest')
   api.use('leaonline:utils')
   api.mainModule('utils-tests.js')
